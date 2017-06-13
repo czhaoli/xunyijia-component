@@ -45,7 +45,7 @@ export default class Account extends Component {
     return search;
   }
   render() {
-    const {title, searchList, columns, page, total, perPage, onAdd, data} = this.props;
+    const {title, searchList, columns, page, total, perPage, onAdd, data, rowSelection} = this.props;
     const pagination = {
       current: page,
       total: total,
@@ -77,7 +77,7 @@ export default class Account extends Component {
           {searchList && this.renderSearch.call(this, searchList)}
           {onAdd && <Button type="primary" className="fr btn-margin-top" onClick={onAdd}>新增账号</Button>}
         </div>
-        <Table columns={columns} dataSource={data} pagination={pagination} rowKey={(item)=>item['_id']}/>
+        <Table columns={columns} dataSource={data} pagination={pagination} rowKey={(item)=>item['_id']} rowSelection={rowSelection}/>
       </div>
     );
   }
