@@ -4,16 +4,26 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _css = require('antd/lib/form/style/css');
+
+var _form = require('antd/lib/form');
+
+var _form2 = _interopRequireDefault(_form);
+
+var _css2 = require('antd/lib/select/style/css');
+
+var _select = require('antd/lib/select');
+
+var _select2 = _interopRequireDefault(_select);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _antd = require('antd');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Option = _antd.Select.Option;
-var FormItem = _antd.Form.Item;
+var Option = _select2.default.Option;
+var FormItem = _form2.default.Item;
 
 exports.default = function (_ref) {
   var getFieldValue = _ref.getFieldValue,
@@ -41,7 +51,7 @@ exports.default = function (_ref) {
       }],
       initialValue: initialValue
     })(_react2.default.createElement(
-      _antd.Select,
+      _select2.default,
       { notFoundContent: '\u6CA1\u6570\u636E', placeholder: '\u8BF7\u9009\u62E9' },
       _react2.default.createElement(
         Option,

@@ -12,11 +12,21 @@ var _objectWithoutProperties2 = require('babel-runtime/helpers/objectWithoutProp
 
 var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
 
+var _css = require('antd/lib/form/style/css');
+
+var _form = require('antd/lib/form');
+
+var _form2 = _interopRequireDefault(_form);
+
+var _css2 = require('antd/lib/select/style/css');
+
+var _select = require('antd/lib/select');
+
+var _select2 = _interopRequireDefault(_select);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
-
-var _antd = require('antd');
 
 var _BtnArr = require('./BtnArr');
 
@@ -32,8 +42,8 @@ var _StatusSelect2 = _interopRequireDefault(_StatusSelect);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Option = _antd.Select.Option;
-var FormItem = _antd.Form.Item;
+var Option = _select2.default.Option;
+var FormItem = _form2.default.Item;
 
 /*
   例子：smartsport-school-frontend/src/containers/SchoolAccount/AcountEditForm.js
@@ -57,7 +67,7 @@ exports.default = function (_ref) {
       getFieldDecorator = form.getFieldDecorator;
 
   return _react2.default.createElement(
-    _antd.Form,
+    _form2.default,
     (0, _extends3.default)({}, props, { onSubmit: submitFunc }),
     (0, _FormItemsArr2.default)({
       items: items,

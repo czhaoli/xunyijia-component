@@ -4,6 +4,30 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _css = require('antd/lib/icon/style/css');
+
+var _icon = require('antd/lib/icon');
+
+var _icon2 = _interopRequireDefault(_icon);
+
+var _css2 = require('antd/lib/upload/style/css');
+
+var _upload = require('antd/lib/upload');
+
+var _upload2 = _interopRequireDefault(_upload);
+
+var _css3 = require('antd/lib/button/style/css');
+
+var _button = require('antd/lib/button');
+
+var _button2 = _interopRequireDefault(_button);
+
+var _css4 = require('antd/lib/message/style/css');
+
+var _message = require('antd/lib/message');
+
+var _message2 = _interopRequireDefault(_message);
+
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -37,8 +61,6 @@ var _reactTransformCatchErrors3 = require('react-transform-catch-errors');
 var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
 
 var _class, _temp2;
-
-var _antd = require('antd');
 
 var _v = require('uuid/v4');
 
@@ -177,7 +199,7 @@ var Avatar = _wrapComponent('Avatar')((_temp2 = _class = function (_Component) {
                 host: data.host
               });
             } else {
-              _antd.message.error('获取验证失败');
+              _message2.default.error('获取验证失败');
             }
           }
         };
@@ -201,7 +223,7 @@ var Avatar = _wrapComponent('Avatar')((_temp2 = _class = function (_Component) {
           event = _ref2.event;
 
       if (file.status === 'error') {
-        _antd.message.error('上传失败，请重新上传！');
+        _message2.default.error('上传失败，请重新上传！');
         return;
       }
       var _props = this.props,
@@ -237,7 +259,7 @@ var Avatar = _wrapComponent('Avatar')((_temp2 = _class = function (_Component) {
 
 
       return _react3.default.createElement(
-        _antd.Upload,
+        _upload2.default,
         {
           accept: accept,
           fileList: fileList,
@@ -249,7 +271,7 @@ var Avatar = _wrapComponent('Avatar')((_temp2 = _class = function (_Component) {
           beforeUpload: this.beforeUpload.bind(this)
         },
         _react3.default.createElement(
-          _antd.Button,
+          _button2.default,
           { style: { 'zIndex': 1000 }, onClick: function onClick() {
               _this3.fetchPolicy(policyUrl);
             } },
@@ -274,7 +296,7 @@ var Avatar = _wrapComponent('Avatar')((_temp2 = _class = function (_Component) {
   jsx: _react3.default.createElement(
     'div',
     null,
-    _react3.default.createElement(_antd.Icon, { type: 'upload' }),
+    _react3.default.createElement(_icon2.default, { type: 'upload' }),
     ' Click to upload'
   )
 }, _temp2));

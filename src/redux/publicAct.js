@@ -185,6 +185,23 @@ function delById(_ref10) {
 }
 
 function sendReq(path, method, body, rest, succ, fail, beginType, succType, failType) {
+  if (rest && rest.typeEnd) {
+    beginType = beginType + '_' + rest.typeEnd;
+    succType = succType + '_' + rest.typeEnd;
+    failType = failType + '_' + rest.typeEnd;
+  }
+  if (rest && rest.clear) {
+    var _rest$clear = rest.clear;
+    _rest$clear = _rest$clear === undefined ? {} : _rest$clear;
+    var _rest$clear$data = _rest$clear.data,
+        defaultData = _rest$clear$data === undefined ? [] : _rest$clear$data;
+
+    succ(defaultData);
+    return {
+      type: succType,
+      data: defaultData
+    };
+  }
   return function (dispatch, req) {
     dispatch((0, _extends3.default)({
       type: beginType

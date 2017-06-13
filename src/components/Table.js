@@ -4,6 +4,24 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _css = require('antd/lib/table/style/css');
+
+var _table = require('antd/lib/table');
+
+var _table2 = _interopRequireDefault(_table);
+
+var _css2 = require('antd/lib/button/style/css');
+
+var _button = require('antd/lib/button');
+
+var _button2 = _interopRequireDefault(_button);
+
+var _css3 = require('antd/lib/input/style/css');
+
+var _input = require('antd/lib/input');
+
+var _input2 = _interopRequireDefault(_input);
+
 var _getPrototypeOf = require('babel-runtime/core-js/object/get-prototype-of');
 
 var _getPrototypeOf2 = _interopRequireDefault(_getPrototypeOf);
@@ -39,8 +57,6 @@ var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErr
 var _reactHelmet = require('react-helmet');
 
 var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
-
-var _antd = require('antd');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -106,7 +122,7 @@ var Account = _wrapComponent('Account')(function (_Component) {
             null,
             item.label
           ),
-          _react3.default.createElement(_antd.Input, {
+          _react3.default.createElement(_input2.default, {
             className: 'search-input',
             value: item.value,
             onChange: item.onChange,
@@ -114,7 +130,7 @@ var Account = _wrapComponent('Account')(function (_Component) {
         ));
       });
       search.push(_react3.default.createElement(
-        _antd.Button,
+        _button2.default,
         {
           key: String(searchList.length),
           type: 'primary',
@@ -174,12 +190,12 @@ var Account = _wrapComponent('Account')(function (_Component) {
           { className: 'search-box clearfix' },
           searchList && this.renderSearch.call(this, searchList),
           onAdd && _react3.default.createElement(
-            _antd.Button,
+            _button2.default,
             { type: 'primary', className: 'fr btn-margin-top', onClick: onAdd },
             '\u65B0\u589E\u8D26\u53F7'
           )
         ),
-        _react3.default.createElement(_antd.Table, { columns: columns, dataSource: data, pagination: pagination, rowKey: function rowKey(item) {
+        _react3.default.createElement(_table2.default, { columns: columns, dataSource: data, pagination: pagination, rowKey: function rowKey(item) {
             return item['_id'];
           } })
       );

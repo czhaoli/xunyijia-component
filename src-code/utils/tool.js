@@ -246,12 +246,15 @@ export function getYearList(long = 6) {
   const nowYear = date.getFullYear();
   let firstYear;
   let afterYear;
-  if (month < 8) {
+  let defaultTerm;
+  if (month >=2 && month < 8) {
     firstYear = Number(nowYear) - 1;
     afterYear = nowYear;
+    defaultTerm = 2;
   } else {
     firstYear = nowYear;
     afterYear = Number(nowYear) + 1;
+    defaultTerm = 1;
   }
   const defaultYear = `${firstYear}-${afterYear}`;
   const arr = [];
@@ -260,6 +263,7 @@ export function getYearList(long = 6) {
     arr.push(`${arrTemp[0]}-${arrTemp[1]}`);
   }
   return {
+    defaultTerm,
     defaultYear,
     yearList: arr
   };

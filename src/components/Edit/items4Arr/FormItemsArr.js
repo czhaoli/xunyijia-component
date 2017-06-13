@@ -12,15 +12,25 @@ var _slicedToArray2 = require('babel-runtime/helpers/slicedToArray');
 
 var _slicedToArray3 = _interopRequireDefault(_slicedToArray2);
 
+var _css = require('antd/lib/input/style/css');
+
+var _input = require('antd/lib/input');
+
+var _input2 = _interopRequireDefault(_input);
+
+var _css2 = require('antd/lib/form/style/css');
+
+var _form = require('antd/lib/form');
+
+var _form2 = _interopRequireDefault(_form);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
-var _antd = require('antd');
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var FormItem = _antd.Form.Item;
+var FormItem = _form2.default.Item;
 /*
   items=[[label, jsx, key, rules, obj]]
  */
@@ -49,7 +59,7 @@ function getFormItem(_ref2) {
       getFieldDecorator = _ref2.getFieldDecorator,
       defaultValue = _ref2.defaultValue;
 
-  var defaultJsx = _react2.default.createElement(_antd.Input, { placeholder: '\u8BF7\u586B\u5199' + (item[0] || '') });
+  var defaultJsx = _react2.default.createElement(_input2.default, { placeholder: '\u8BF7\u586B\u5199' + (item[0] || '') });
 
   var _item = (0, _slicedToArray3.default)(item, 5),
       label = _item[0],

@@ -85,6 +85,19 @@ export function delById({
 }
 
 function sendReq(path, method, body, rest, succ, fail, beginType, succType, failType) {
+  if (rest && rest.typeEnd) {
+    beginType = `${beginType}_${rest.typeEnd}`;
+    succType = `${succType}_${rest.typeEnd}`;
+    failType = `${failType}_${rest.typeEnd}`;
+  }
+  if (rest && rest.clear) {
+    let {clear: {data: defaultData = []} = {} } = rest;
+    succ(defaultData);
+    return {
+      type: succType,
+      data: defaultData,
+    };
+  }
   return (dispatch, req) => {
     dispatch({
       type: beginType,

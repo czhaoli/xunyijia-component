@@ -4,6 +4,24 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _css = require('antd/lib/button/style/css');
+
+var _button = require('antd/lib/button');
+
+var _button2 = _interopRequireDefault(_button);
+
+var _css2 = require('antd/lib/alert/style/css');
+
+var _alert = require('antd/lib/alert');
+
+var _alert2 = _interopRequireDefault(_alert);
+
+var _css3 = require('antd/lib/input/style/css');
+
+var _input = require('antd/lib/input');
+
+var _input2 = _interopRequireDefault(_input);
+
 var _set = require('babel-runtime/core-js/set');
 
 var _set2 = _interopRequireDefault(_set);
@@ -32,6 +50,24 @@ var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
+var _css4 = require('antd/lib/form/style/css');
+
+var _form = require('antd/lib/form');
+
+var _form2 = _interopRequireDefault(_form);
+
+var _css5 = require('antd/lib/collapse/style/css');
+
+var _collapse = require('antd/lib/collapse');
+
+var _collapse2 = _interopRequireDefault(_collapse);
+
+var _css6 = require('antd/lib/checkbox/style/css');
+
+var _checkbox = require('antd/lib/checkbox');
+
+var _checkbox2 = _interopRequireDefault(_checkbox);
+
 var _redboxReact2 = require('redbox-react');
 
 var _redboxReact3 = _interopRequireDefault(_redboxReact2);
@@ -45,8 +81,6 @@ var _reactTransformCatchErrors3 = require('react-transform-catch-errors');
 var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
 
 var _reactRedux = require('react-redux');
-
-var _antd = require('antd');
 
 var _reduxConnect = require('redux-connect');
 
@@ -71,9 +105,9 @@ function _wrapComponent(id) {
   };
 }
 
-var CheckboxGroup = _antd.Checkbox.Group;
-var Panel = _antd.Collapse.Panel;
-var FormItem = _antd.Form.Item;
+var CheckboxGroup = _checkbox2.default.Group;
+var Panel = _collapse2.default.Panel;
+var FormItem = _form2.default.Item;
 
 var AddRole = _wrapComponent('AddRole')(function (_Component) {
   (0, _inherits3.default)(AddRole, _Component);
@@ -227,7 +261,7 @@ var AddRole = _wrapComponent('AddRole')(function (_Component) {
           'div',
           { style: { borderBottom: '1px solid #E9E9E9' } },
           _react3.default.createElement(
-            _antd.Checkbox,
+            _checkbox2.default,
             {
               checked: checkAllState['checked'],
               indeterminate: checkAllState['indeterminate'],
@@ -305,7 +339,7 @@ var AddRole = _wrapComponent('AddRole')(function (_Component) {
               validateStatus: this.state.inputState,
               help: this.state.inputTips
             },
-            _react3.default.createElement(_antd.Input, { defaultValue: name, ref: function ref(_ref) {
+            _react3.default.createElement(_input2.default, { defaultValue: name, ref: function ref(_ref) {
                 return _this3.inputBox = _ref;
               }, type: 'text', placeholder: '\u8BF7\u8F93\u5165\u89D2\u8272\u540D\u79F0...',
               maxLength: '16',
@@ -322,17 +356,17 @@ var AddRole = _wrapComponent('AddRole')(function (_Component) {
             ),
             _react3.default.createElement('br', null),
             _react3.default.createElement(
-              _antd.Collapse,
+              _collapse2.default,
               { bordered: false, defaultActiveKey: ['0'] },
               permissionList.map(function (item, index) {
                 return _this3.getRoleBlock(item, index, checkList);
               })
             ),
-            _react3.default.createElement(_antd.Alert, { style: { height: 30, marginTop: 3, marginBottom: 3 }, message: this.state.checkboxTips, type: this.state.checkboxState, showIcon: true })
+            _react3.default.createElement(_alert2.default, { style: { height: 30, marginTop: 3, marginBottom: 3 }, message: this.state.checkboxTips, type: this.state.checkboxState, showIcon: true })
           ),
 
           // 保存操作的提示
-          saveState && _react3.default.createElement(_antd.Alert, { style: { height: 30, marginTop: 3, marginBottom: 3 }, message: saveState, type: 'info', showIcon: true }),
+          saveState && _react3.default.createElement(_alert2.default, { style: { height: 30, marginTop: 3, marginBottom: 3 }, message: saveState, type: 'info', showIcon: true }),
           _react3.default.createElement(
             'div',
             { className: styles.buttonArea, style: {
@@ -340,7 +374,7 @@ var AddRole = _wrapComponent('AddRole')(function (_Component) {
                 margin: '20px'
               } },
             _react3.default.createElement(
-              _antd.Button,
+              _button2.default,
               { type: 'default', style: {
                   marginRight: 40
                 },
@@ -349,7 +383,7 @@ var AddRole = _wrapComponent('AddRole')(function (_Component) {
               '\u53D6\u6D88'
             ),
             _react3.default.createElement(
-              _antd.Button,
+              _button2.default,
               { type: 'primary',
                 onClick: this.saveBtn.bind(this, checkList, id, saveSucc, saveRole)
               },

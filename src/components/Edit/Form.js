@@ -4,11 +4,21 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _css = require('antd/lib/form/style/css');
+
+var _form = require('antd/lib/form');
+
+var _form2 = _interopRequireDefault(_form);
+
+var _css2 = require('antd/lib/select/style/css');
+
+var _select = require('antd/lib/select');
+
+var _select2 = _interopRequireDefault(_select);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
-
-var _antd = require('antd');
 
 var _Btn = require('./Btn');
 
@@ -28,8 +38,8 @@ var _FormItems2 = _interopRequireDefault(_FormItems);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Option = _antd.Select.Option;
-var FormItem = _antd.Form.Item;
+var Option = _select2.default.Option;
+var FormItem = _form2.default.Item;
 
 exports.default = function () {
   var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
@@ -53,7 +63,7 @@ exports.default = function () {
     null,
     _react2.default.createElement(_Title2.default, { title: title }),
     _react2.default.createElement(
-      _antd.Form,
+      _form2.default,
       { onSubmit: submit, style: {
           marginTop: 15
         } },

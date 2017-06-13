@@ -4,6 +4,18 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _css = require('antd/lib/table/style/css');
+
+var _table = require('antd/lib/table');
+
+var _table2 = _interopRequireDefault(_table);
+
+var _css2 = require('antd/lib/button/style/css');
+
+var _button = require('antd/lib/button');
+
+var _button2 = _interopRequireDefault(_button);
+
 var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
@@ -11,8 +23,6 @@ var _react2 = _interopRequireDefault(_react);
 var _reactHelmet = require('react-helmet');
 
 var _reactHelmet2 = _interopRequireDefault(_reactHelmet);
-
-var _antd = require('antd');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -30,7 +40,7 @@ exports.default = function (_ref) {
     key: '_id',
     render: function render(text, record, index) {
       return _react2.default.createElement(
-        _antd.Button,
+        _button2.default,
         { type: 'primary', onClick: function onClick() {
             onEditor(text);
           } },
@@ -51,12 +61,12 @@ exports.default = function (_ref) {
         '\u89D2\u8272\u7BA1\u7406'
       ),
       _react2.default.createElement(
-        _antd.Button,
+        _button2.default,
         { type: 'primary', className: 'fr', onClick: onAddRole },
         '\u65B0\u589E\u89D2\u8272'
       )
     ),
-    _react2.default.createElement(_antd.Table, { columns: columns, dataSource: roleColumns, pagination: false, rowKey: function rowKey(item) {
+    _react2.default.createElement(_table2.default, { columns: columns, dataSource: roleColumns, pagination: false, rowKey: function rowKey(item) {
         return item['_id'];
       } })
   );
