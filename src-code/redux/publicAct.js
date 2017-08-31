@@ -119,6 +119,7 @@ function sendReq(path, method, body, rest, succ, fail, beginType, succType, fail
       });
       succ(data);
     }).catch(err=>{
+      console.error(err);
       dispatch({
         type: failType,
         err,

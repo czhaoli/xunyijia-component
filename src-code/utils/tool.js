@@ -268,37 +268,6 @@ export function getYearList(long = 6) {
     yearList: arr
   };
 }
-/*
-  由于object是按照引用传递，一般的赋值复制只是复制了引用，
-  会出现修改修改后者的时候也影响到前者的值，例如
-  var a = {b: {c: 1}}
-  var b = deptCopy(a);
-  b.b.c =2;
-  这时候 a和b都为{b: {c: 2}}
-  这个深复制方法使用如下：
-  var a = {b: {c: 1}}
-  var b = deptCopy(a);
-  b.b.c =2;
-  这时候a不变，b为{b: {c: 2}}
-  这样b的修改不会改动到a里面的值
- */
-export function deptCopy(data) {
-  let rd;
-  let cn;
-  data && data.constructor && (cn = data.constructor.name);
-  if (cn === 'Array') {
-    rd = data.map(item => deptCopy(item));
-  } else if(cn === 'Object') {
-    const temp = {};
-    Object.keys(data).forEach(key => {
-      temp[key] = deptCopy(data[key])
-    })
-    rd = temp;
-  } else {
-    rd = data;
-  }
-  return rd;
-}
 
 export function ones(arr) {
   var temp = arr.filter(item => item);

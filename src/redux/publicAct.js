@@ -221,6 +221,7 @@ function sendReq(path, method, body, rest, succ, fail, beginType, succType, fail
       }, rest));
       succ(data);
     }).catch(function (err) {
+      console.error(err);
       dispatch((0, _extends3.default)({
         type: failType,
         err: err
