@@ -53,7 +53,7 @@ var _components = {
 };
 
 var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-  filename: 'src-code/components/Edit/Edit.js',
+  filename: 'src-code/components-temp/Edit/Edit.js',
   components: _components,
   locals: [],
   imports: [_react3.default, _redboxReact3.default]

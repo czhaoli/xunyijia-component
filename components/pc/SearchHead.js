@@ -8,13 +8,9 @@ var _objectWithoutProperties2 = require('babel-runtime/helpers/objectWithoutProp
 
 var _objectWithoutProperties3 = _interopRequireDefault(_objectWithoutProperties2);
 
-var _css = require('antd/lib/button/style/css');
-
 var _button = require('antd/lib/button');
 
 var _button2 = _interopRequireDefault(_button);
-
-var _css2 = require('antd/lib/input/style/css');
 
 var _input = require('antd/lib/input');
 
@@ -24,13 +20,9 @@ var _assign = require('babel-runtime/core-js/object/assign');
 
 var _assign2 = _interopRequireDefault(_assign);
 
-var _css3 = require('antd/lib/select/style/css');
-
 var _select = require('antd/lib/select');
 
 var _select2 = _interopRequireDefault(_select);
-
-var _css4 = require('antd/lib/form/style/css');
 
 var _form = require('antd/lib/form');
 
@@ -47,6 +39,14 @@ var _react3 = _interopRequireDefault(_react2);
 var _reactTransformCatchErrors3 = require('react-transform-catch-errors');
 
 var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
+
+require('antd/lib/button/style/css');
+
+require('antd/lib/input/style/css');
+
+require('antd/lib/select/style/css');
+
+require('antd/lib/form/style/css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 

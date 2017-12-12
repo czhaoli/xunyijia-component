@@ -107,6 +107,7 @@ function sendReq(path, method, body, rest, succ, fail, beginType, succType, fail
       url: path,
       method: method,
       body,
+      ...rest,
     };
     if (method === 'get') {
       delete reqParams.body;

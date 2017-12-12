@@ -32,8 +32,6 @@ var _inherits2 = require('babel-runtime/helpers/inherits');
 
 var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _css = require('antd/lib/select/style/css');
-
 var _select = require('antd/lib/select');
 
 var _select2 = _interopRequireDefault(_select);
@@ -51,6 +49,8 @@ var _reactTransformCatchErrors3 = require('react-transform-catch-errors');
 var _reactTransformCatchErrors4 = _interopRequireDefault(_reactTransformCatchErrors3);
 
 var _class, _temp;
+
+require('antd/lib/select/style/css');
 
 var _lodash = require('lodash');
 

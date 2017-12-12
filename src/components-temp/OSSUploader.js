@@ -79,7 +79,7 @@ var _components = {
 };
 
 var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-  filename: 'src-code/components/OSSUploader.js',
+  filename: 'src-code/components-temp/OSSUploader.js',
   components: _components,
   locals: [],
   imports: [_react3.default, _redboxReact3.default]

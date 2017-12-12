@@ -206,11 +206,11 @@ function sendReq(path, method, body, rest, succ, fail, beginType, succType, fail
     dispatch((0, _extends3.default)({
       type: beginType
     }, rest));
-    var reqParams = {
+    var reqParams = (0, _extends3.default)({
       url: path,
       method: method,
       body: body
-    };
+    }, rest);
     if (method === 'get') {
       delete reqParams.body;
     }

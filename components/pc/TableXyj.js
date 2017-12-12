@@ -4,8 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _css = require('antd/lib/table/style/css');
-
 var _table = require('antd/lib/table');
 
 var _table2 = _interopRequireDefault(_table);
@@ -13,6 +11,8 @@ var _table2 = _interopRequireDefault(_table);
 var _assign = require('babel-runtime/core-js/object/assign');
 
 var _assign2 = _interopRequireDefault(_assign);
+
+require('antd/lib/table/style/css');
 
 var _react = require('react');
 

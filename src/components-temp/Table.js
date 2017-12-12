@@ -67,7 +67,7 @@ var _components = {
 };
 
 var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-  filename: 'src-code/components/Table.js',
+  filename: 'src-code/components-temp/Table.js',
   components: _components,
   locals: [],
   imports: [_react3.default, _redboxReact3.default]
@@ -155,7 +155,8 @@ var Account = _wrapComponent('Account')(function (_Component) {
           total = _props2.total,
           perPage = _props2.perPage,
           onAdd = _props2.onAdd,
-          data = _props2.data;
+          data = _props2.data,
+          rowSelection = _props2.rowSelection;
 
       var pagination = {
         current: page,
@@ -197,7 +198,7 @@ var Account = _wrapComponent('Account')(function (_Component) {
         ),
         _react3.default.createElement(_table2.default, { columns: columns, dataSource: data, pagination: pagination, rowKey: function rowKey(item) {
             return item['_id'];
-          } })
+          }, rowSelection: rowSelection })
       );
     }
   }]);

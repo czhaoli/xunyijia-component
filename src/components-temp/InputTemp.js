@@ -45,7 +45,7 @@ var _components = {
 };
 
 var _reactTransformCatchErrors2 = (0, _reactTransformCatchErrors4.default)({
-  filename: 'src-code/components/InputTemp.js',
+  filename: 'src-code/components-temp/InputTemp.js',
   components: _components,
   locals: [],
   imports: [_react3.default, _redboxReact3.default]

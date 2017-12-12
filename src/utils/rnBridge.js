@@ -75,8 +75,8 @@ function getData(data) {
       }
     };
     timeout = setTimeout(function () {
-      document && document.removeEventListener('message', fn);
-      reject('超时！');
+      // document && document.removeEventListener('message', fn);
+      // reject('超时！');
     }, 15000);
     document && document.addEventListener('message', fn);
     window && window.postMessage && window.postMessage(postData);

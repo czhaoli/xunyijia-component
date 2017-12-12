@@ -181,8 +181,6 @@ export default function print(eles) {
 
   const PrintAreaWindow = PrintArea.getPrintWindow();
 
-  PrintArea.write( PrintAreaWindow.doc, eles );
-
   const iframe1 = PrintAreaWindow.iframe;
   if (iframe1.attachEvent) {
     iframe1.attachEvent("onload", function() {
@@ -193,4 +191,5 @@ export default function print(eles) {
       PrintArea.print( PrintAreaWindow );
     };
   }
+  PrintArea.write( PrintAreaWindow.doc, eles );
 }
